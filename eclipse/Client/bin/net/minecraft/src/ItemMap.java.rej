@@ -1,0 +1,18 @@
+--- net/minecraft/src/ItemMap.java	Fri Mar 30 23:25:53 2012
++++ net/minecraft/src/ItemMap.java	Fri Mar 30 23:38:36 2012
+@@ -19,7 +19,6 @@
+    }
+ 
+    public static MapData func_28013_a(short p_28013_0_, World p_28013_1_) {
+-      "map_" + p_28013_0_;
+       MapData var3 = (MapData)p_28013_1_.func_28103_a(MapData.class, "map_" + p_28013_0_);
+       if(var3 == null) {
+          int var4 = p_28013_1_.func_28101_b("map");
+@@ -32,7 +31,6 @@
+    }
+ 
+    public MapData func_28012_a(ItemStack p_28012_1_, World p_28012_2_) {
+-      "map_" + p_28012_1_.func_21181_i();
+       MapData var4 = (MapData)p_28012_2_.func_28103_a(MapData.class, "map_" + p_28012_1_.func_21181_i());
+       if(var4 == null) {
+          p_28012_1_.func_28156_b(p_28012_2_.func_28101_b("map"));

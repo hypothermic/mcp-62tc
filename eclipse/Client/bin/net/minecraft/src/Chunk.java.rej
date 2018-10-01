@@ -1,0 +1,11 @@
+--- minecraft/net/minecraft/src/Chunk.java	0000-00-00 00:00:00.000000000 -0000
++++ minecraft/net/minecraft/src/Chunk.java	0000-00-00 00:00:00.000000000 -0000
+@@ -749,7 +791,7 @@
+      */
+     public int getSavedLightValue(EnumSkyBlock par1EnumSkyBlock, int par2, int par3, int par4)
+     {
+-        ExtendedBlockStorage var5 = this.storageArrays[par3 >> 4];
++        ExtendedBlockStorage var5 = (par3 >> 4 >= storageArrays.length || par3 >> 4 < 0 ? null : storageArrays[par3 >> 4]);
+         return var5 == null ? par1EnumSkyBlock.defaultLightValue : (par1EnumSkyBlock == EnumSkyBlock.Sky ? var5.getExtSkylightValue(par2, par3 & 15, par4) : (par1EnumSkyBlock == EnumSkyBlock.Block ? var5.getExtBlocklightValue(par2, par3 & 15, par4) : par1EnumSkyBlock.defaultLightValue));
+     }
+ 

@@ -1,0 +1,11 @@
+--- minecraft/net/minecraft/src/World.java	0000-00-00 00:00:00.000000000 -0000
++++ minecraft/net/minecraft/src/World.java	0000-00-00 00:00:00.000000000 -0000
+@@ -2732,7 +2744,7 @@
+             if (var5 != null && !var5.isEmpty())
+             {
+                 Block var6 = Block.blocksList[this.getBlockId(par1, par2, par3)];
+-                return var6 == null ? false : var6.blockMaterial.isOpaque() && var6.renderAsNormalBlock();
++                return var6 == null ? false : isBlockNormalCube(par1, par2, par3);
+             }
+             else
+             {

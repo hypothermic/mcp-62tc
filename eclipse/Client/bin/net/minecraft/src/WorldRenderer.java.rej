@@ -1,0 +1,10 @@
+--- minecraft/net/minecraft/src/WorldRenderer.java	0000-00-00 00:00:00.000000000 -0000
++++ minecraft/net/minecraft/src/WorldRenderer.java	0000-00-00 00:00:00.000000000 -0000
+@@ -13,7 +16,6 @@
+     /** Reference to the World object. */
+     public World worldObj;
+     private int glRenderList = -1;
+-    private static Tessellator tessellator = Tessellator.instance;
+     public static int chunksUpdated = 0;
+     public int posX;
+     public int posY;

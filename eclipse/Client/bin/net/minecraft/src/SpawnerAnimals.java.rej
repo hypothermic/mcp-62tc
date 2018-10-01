@@ -1,0 +1,15 @@
+--- minecraft/net/minecraft/src/SpawnerAnimals.java	0000-00-00 00:00:00.000000000 -0000
++++ minecraft/net/minecraft/src/SpawnerAnimals.java	0000-00-00 00:00:00.000000000 -0000
+@@ -82,6 +86,12 @@
+                 if ((!var34.getPeacefulCreature() || par2) && (var34.getPeacefulCreature() || par1) && par0World.countEntities(var34.getCreatureClass()) <= var34.getMaxNumberOfCreature() * eligibleChunksForSpawning.size() / 256)
+                 {
+                     Iterator var35 = eligibleChunksForSpawning.keySet().iterator();
++                    if (mod_MinecraftForge.SPAWNER_MAKE_MORE_RANDOM)
++                    {
++                        ArrayList<ChunkCoordIntPair> tmp = new ArrayList(eligibleChunksForSpawning.keySet());
++                        Collections.shuffle(tmp);
++                        var35 = tmp.iterator();
++                    }
+                     label108:
+ 
+                     while (var35.hasNext())

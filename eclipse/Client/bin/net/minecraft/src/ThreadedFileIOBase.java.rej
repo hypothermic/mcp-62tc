@@ -1,0 +1,12 @@
+--- net/minecraft/src/ThreadedFileIOBase.java	Fri Mar 30 23:25:55 2012
++++ net/minecraft/src/ThreadedFileIOBase.java	Fri Mar 30 23:38:36 2012
+@@ -20,7 +20,9 @@
+    }
+ 
+    public void run() {
++      while (true) {
+       this.func_40568_b();
++      }
+    }
+ 
+    private void func_40568_b() {

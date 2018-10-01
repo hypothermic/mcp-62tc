@@ -1,0 +1,11 @@
+--- minecraft/net/minecraft/src/WorldProvider.java	0000-00-00 00:00:00.000000000 -0000
++++ minecraft/net/minecraft/src/WorldProvider.java	0000-00-00 00:00:00.000000000 -0000
+@@ -176,7 +178,7 @@
+ 
+     public static WorldProvider getProviderForDimension(int par0)
+     {
+-        return (WorldProvider)(par0 == -1 ? new WorldProviderHell() : (par0 == 0 ? new WorldProviderSurface() : (par0 == 1 ? new WorldProviderEnd() : null)));
++        return DimensionManager.createProviderFor(par0);
+     }
+ 
+     /**

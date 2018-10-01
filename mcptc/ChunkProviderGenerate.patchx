@@ -1,0 +1,12 @@
+--- ChunkProviderGenerate.java	2018-10-01 10:07:13.577212284 +0200
++++ ChunkProviderGenerate.java	2018-10-01 10:15:37.974935547 +0200
+@@ -327,8 +327,7 @@
+         this.noise3 = this.noiseGen3.generateNoiseOctaves(this.noise3, par2, par3, par4, par5, par6, par7, var44 / 80.0D, var45 / 160.0D, var44 / 80.0D);
+         this.noise1 = this.noiseGen1.generateNoiseOctaves(this.noise1, par2, par3, par4, par5, par6, par7, var44, var45, var44);
+         this.noise2 = this.noiseGen2.generateNoiseOctaves(this.noise2, par2, par3, par4, par5, par6, par7, var44, var45, var44);
+-        int par4 = false;
+-        int par2 = false;
++        par2 = par4 = 0;
+         int var12 = 0;
+         int var13 = 0;
+ 

@@ -1,0 +1,10 @@
+--- minecraft/net/minecraft/src/RenderEngine.java	0000-00-00 00:00:00.000000000 -0000
++++ minecraft/net/minecraft/src/RenderEngine.java	0000-00-00 00:00:00.000000000 -0000
+@@ -215,6 +218,7 @@
+                 }
+ 
+                 this.textureMap.put(par1Str, Integer.valueOf(var6));
++                ForgeHooksClient.onTextureLoad(par1Str, var6);
+                 return var6;
+             }
+             catch (Exception var5)

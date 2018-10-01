@@ -1,0 +1,23 @@
+--- minecraft/net/minecraft/src/GuiIngame.java	0000-00-00 00:00:00.000000000 -0000
++++ minecraft/net/minecraft/src/GuiIngame.java	0000-00-00 00:00:00.000000000 -0000
+@@ -144,7 +146,19 @@
+ 
+                 var46 = var7 - 39;
+                 var22 = var46 - 10;
+-                var23 = this.mc.thePlayer.getTotalArmorValue();
++                var23 = 0;
++                for (int x = 0; x < mc.thePlayer.inventory.armorInventory.length; x++)
++                {
++                    ItemStack stack = mc.thePlayer.inventory.armorInventory[x];
++                    if (stack != null && stack.getItem() instanceof ISpecialArmor)
++                    {
++                        var23 += ((ISpecialArmor)stack.getItem()).getArmorDisplay(mc.thePlayer, stack, x);
++                    }
++                    else if (stack != null && stack.getItem() instanceof ItemArmor)
++                    {
++                        var23 += ((ItemArmor)stack.getItem()).damageReduceAmount;
++                    }
++                }
+                 int var24 = -1;
+ 
+                 if (this.mc.thePlayer.isPotionActive(Potion.regeneration))

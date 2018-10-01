@@ -1,0 +1,16 @@
+--- net/minecraft/client/Minecraft.java	Fri Mar 30 23:25:51 2012
++++ net/minecraft/client/Minecraft.java	Fri Mar 30 23:38:36 2012
+@@ -1618,11 +1618,13 @@
+ 
+             this.field_6324_e.func_600_a(var6.field_22395_a + var10, 64, var6.field_22396_c + var8);
+             if(!this.field_6327_b.func_35643_e()) {
++/*
+                while(true) {
+                   if(this.field_6324_e.func_6465_g()) {
+                      continue;
+                   }
+                }
++*/
+             }
+          }
+       }

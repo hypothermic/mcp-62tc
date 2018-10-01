@@ -1,0 +1,11 @@
+--- WorldGenShrub.java	2018-10-01 10:11:59.167428989 +0200
++++ WorldGenShrub.java	2018-10-01 10:13:34.568594587 +0200
+@@ -41,7 +41,7 @@
+                     {
+                         int var14 = var13 - par5;
+ 
+-                        block = Block.blocksList[par1World.getBlockId(var11, var8, var13)];
++                        Block block = Block.blocksList[par1World.getBlockId(var11, var8, var13)];
+ 
+                         if ((Math.abs(var12) != var10 || Math.abs(var14) != var10 || par2Random.nextInt(2) != 0) && (block == null || block.canBeReplacedByLeaves(par1World, var11, var8, var13)))
+                         {

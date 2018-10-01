@@ -1,0 +1,16 @@
+--- minecraft/net/minecraft/src/BlockFire.java	0000-00-00 00:00:00.000000000 -0000
++++ minecraft/net/minecraft/src/BlockFire.java	0000-00-00 00:00:00.000000000 -0000
+@@ -254,7 +268,12 @@
+      */
+     private boolean canNeighborBurn(World par1World, int par2, int par3, int par4)
+     {
+-        return this.canBlockCatchFire(par1World, par2 + 1, par3, par4) ? true : (this.canBlockCatchFire(par1World, par2 - 1, par3, par4) ? true : (this.canBlockCatchFire(par1World, par2, par3 - 1, par4) ? true : (this.canBlockCatchFire(par1World, par2, par3 + 1, par4) ? true : (this.canBlockCatchFire(par1World, par2, par3, par4 - 1) ? true : this.canBlockCatchFire(par1World, par2, par3, par4 + 1)))));
++        return canBlockCatchFire(par1World, par2 + 1, par3, par4, 4) ||
++               canBlockCatchFire(par1World, par2 - 1, par3, par4, 5) ||
++               canBlockCatchFire(par1World, par2, par3 - 1, par4, 1) ||
++               canBlockCatchFire(par1World, par2, par3 + 1, par4, 0) ||
++               canBlockCatchFire(par1World, par2, par3, par4 - 1, 3) ||
++               canBlockCatchFire(par1World, par2, par3, par4 + 1, 2);
+     }
+ 
+     /**
